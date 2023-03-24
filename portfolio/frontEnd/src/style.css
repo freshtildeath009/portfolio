@@ -1,0 +1,281 @@
+@import url(/frontEnd/src/variable.css);
+@font-face {
+    font-family: bolt;
+    src: url(/frontEnd/fonts/AquireBold-8Ma60.otf);
+}
+/* UTILITIES */
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--clr-blk);
+}
+.active{
+    display: block;
+}
+.header{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+}
+/* NAVIGATION LAPTOP FORMAT */
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--ff-r);
+    position: fixed;
+    width: 100%;
+    background: orange;
+    z-index: 999;
+    opacity: 0.8;
+}
+.logo{
+    height: 50px;
+}
+.nav-links-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.link{
+    padding: 20px;
+}
+
+.hero-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    font-family: var(--ff-r);
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.hero-title{
+    font-size: var(--fs-4-5);
+    font-weight: var(--fw-900);
+}
+/* MAIN SECTION */
+.project-area{
+    height: 177vh;
+}
+.project-logo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 230px;
+}
+#project-logo{
+    height: 800px;
+    width: max-content;
+    z-index: 0;
+
+}
+.project-title{
+    font-size: 300px;
+    font-weight: var(--fw-900);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    bottom: 400px;
+    opacity: 0.1;
+}
+/* BLACKJACK AREA */
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "blackjack-text blackjack-image";
+    position: relative;
+    bottom: 600px;
+    height: 100svh;
+    font-family: var(--ff-r);
+}
+/* BLACKJACK TEXT */
+.blackjack-text{
+    grid-area: blackjack-text;
+    background-image: linear-gradient(violet,pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+    grid-auto-flow: column;
+    opacity: 0.9;
+}
+.blackjack-title{
+    font-family: bolt;
+    font-size: var(--fs-5-5);
+}
+.blackjack-image{
+    grid-area: blackjack-image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+}
+.blackjack-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#blackjack-image{
+    height: 300px;
+    width: 200px;
+}
+@media only screen and (max-width: 1030px) {
+    .project-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "blackjack-text"
+        "blackjack-image";
+        bottom: 450px;
+    }
+    .blackjack-title{
+        font-size: var(--fs-4-5);
+    }
+    .project-title{
+        font-size: 180px;
+    }
+    .blackjack-image{
+        height: 350px;
+    }
+}
+@media  only screen and (max-width: 768px) {
+    .project-area{
+        height: 150vh;
+    }
+    #project-logo{
+        height: fit-content;
+    }
+    .project-logo{
+        bottom: 150px;
+    }
+    .project-title{
+        bottom: 230px;
+        font-size: 140px;
+    }
+    .project-container{
+        bottom: 240px;
+    }
+    #blackjack-title{
+        overflow: hidden;
+    }
+    .blackjack-title{
+        font-size: var(--fs-3);
+    }
+}
+@media  only screen and (max-width: 600px){
+    .project-title{
+        font-size: 90px;
+        opacity: 0.1;
+    }
+}
+/* CONTACT AREA */
+.contact-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-dblk);
+    position: relative;
+    bottom: 0;
+    font-family: var(--ff-r);
+}
+.contact-logo{
+    z-index: 2;
+}
+.contact-container-main{
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-title{
+    font-size: var(--fs-5-5);
+    font-weight: var(--fw-900);
+    color: var(--clr-wht);
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "input message";
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.name,
+.email{
+    height: 4rem;
+    width: 515px;
+}
+.name,
+.email,
+.message{
+    font-size: 2rem;
+    text-indent: 1rem;
+}
+.name:focus,
+.email:focus,
+.message:focus{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+.areatext-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    grid-area: input;
+}
+.message{
+    grid-area: message;
+    margin: 0;
+}
+.contact-submit{
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border: none;
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+    cursor: pointer;
+}
+@media only screen and (max-width: 1100px){
+    .contact-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "input"
+        "message";
+    }
+
+}
+@media  only screen and (max-width: 650px){
+    .contact-title{
+        font-size: var(--fs-3);
+    }
+    .name,
+    .email{
+        width: 350px;
+    }
+    .message{
+        width: 350px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontEnd/src/style.css">
+    <link rel="stylesheet" href="/frontEnd/src/variable.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div><img class="logo" src="/frontEnd/svg/logo.png" alt=""></div>
+            <ul class="nav-links-container">
+                <div class="toggle" type="hidden"><i class="fa fa-bars"></i></div>
+                <li><a class="link" href="#">Pingu</a></li>
+                <li><a class="link" href="#">Project</a></li>
+                <li><a class="link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-area">
+            <div class="hero-text">
+                <h1 class="hero-title">Pingu</h1>
+                <p class="hero-p">Web Developer</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-area">
+            <div class="project-logo"><img id="project-logo" src="/frontEnd/svg/Hand coding.png" alt=""></div>
+            <div class="project-title"><h1>Projects</h1></div>
+            <div class="project-container">
+                <div class="project-text-container blackjack-text">
+                    <div class="blackjack-title"><h1 id="blackjack-title">BlackJack</h1></div>                </div>
+                <div class="project-text-container blackjack-image">
+                    <div class="blackjack-image-container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio facere voluptatibus enim animi facilis tempora nam fuga illo odit amet excepturi praesentium deleniti reprehenderit quaerat? Quam aliquid magni reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="contact-area">
+                <div class="contact-logo">
+                    <img id="contact-logo" src="/frontEnd/svg/antena.png" alt="">
+                </div>
+                <form class="contact-container-main" action="https://formsubmit.co/visrobis@gmail.com" method="POST">
+                    <div class="contact-title">Contact</div>
+                    <div class="contact-container">
+                        <div class="input-container input">
+                            <input class="name" id="input" name="name" type="text" placeholder="Name" required>
+                            <input class="email" id="input" name="email" type="email" placeholder="Email" required>                        </div>
+                        <div class="areatext-container message">
+                            <textarea class="message" id="input" name="message" id="" cols="30" rows="8" placeholder="Message me!!" required></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-submit-container">
+                        <input class="submit-btn contact-submit" type="submit" name="submit" value="Send Message">
+                    </div>
+                </form>    
+            </div>
+        </footer>
+    </main>
+    <script src="/frontEnd/src/vanilla.js"></script>
+</body>
+</html>
